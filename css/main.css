@@ -1,0 +1,287 @@
+/* www.alsina.xyz | Alchemically bonded by Sebastian Alsina (@youngseebi) */
+
+
+/* [==] COLORS [==]
+ * 1:
+ * 2:
+ * 3:
+ * 4:
+*/
+
+
+/* [==] FONTS [==]*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700');
+
+/*
+ * [==] General [==]
+*/
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    color: #222222;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    color: red;
+}
+
+.landing {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/temp-images/pexels-photo-298864.jpeg);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.landing video {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* The following will size the video to fit the full container. Not necessary, just nice.*/
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    padding: 44px;
+    position: relative;
+    z-index: 2;
+}
+
+.header .logo,
+.header .links {
+    width: auto;
+    height: 60px;
+}
+
+.header .logo {
+    float: left;
+}
+
+.header .logo img {
+    height: 100%;
+}
+
+.header .links {
+    float: right;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-width: 768px) {
+    .header .links {
+        display: none;
+    }
+}
+
+.header .links a {
+    margin-right: 22px;
+    color: white;
+}
+
+.header .links a:last-of-type {
+    margin-right: 0;
+}
+
+.header a.mobile-nav-btn {
+    display: none;
+    color: white;
+    float: right;
+    font-size: 2em;
+}
+
+.header a.mobile-nav-btn i {
+    transition: 0.2s ease all;
+}
+
+.header a.mobile-nav-btn i.active {
+    transform: rotate(90deg);
+    transform-origin: 50% 50%;
+}
+
+.mobile-nav {
+    width: 90%;
+    margin: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 22px;
+    display: none;
+    position: relative;
+    z-index: 2;
+}
+
+.mobile-nav a {
+    display: block;
+    color: white;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mobile-nav a:last-of-type {
+    margin-bottom: 0;
+}
+
+@media only screen and (min-device-width: 320px) and (max-width: 768px) {
+    .header a.mobile-nav-btn {
+        display: block;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.landing .scroll-down {
+    -webkit-animation: blink 1.5s linear infinite;
+    -moz-animation: blink 1.5s linear infinite;
+    -ms-animation: blink 1.5s linear infinite;
+    -o-animation: blink 1.5s linear infinite;
+    animation: blink 1.5s linear infinite;
+    width: 100%;
+    padding: 44px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    font-size: 3em;
+}
+
+.sections {
+    width: 100%;
+    height: auto;
+    font-family: 'Lora', serif;
+}
+
+.sections a {
+    display: block;
+    width: 25%;
+    height: 260px;
+    line-height: 260px;
+    float: left;
+    text-align: center;
+    background-size: cover;
+    color: white;
+    font-weight: 100;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-device-width: 320px) and (max-width: 768px) {
+    .sections a {
+        width: 100%;
+        float: none;
+    }
+}
+
+.sections a:nth-of-type(1) {
+    background-image: url(../img/temp-images/holiday-trip-packaging-8434.jpg);
+}
+
+.sections a:nth-of-type(2) {
+    background-image: url(../img/temp-images/pexels-photo-102129.jpeg);
+}
+
+.sections a:nth-of-type(3) {
+    background-image: url(../img/temp-images/pexels-photo-25641.jpg);
+}
+
+.sections a:nth-of-type(4) {
+    background-image: url(../img/temp-images/pexels-photo-297933.jpeg);
+}
+
+.sections span {
+    padding: 12px 18px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease all;
+}
+
+.sections span:hover {
+    background-color: black;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    padding: 44px;
+}
+
+.footer a {
+    color: black;
+    font-size: 0.7em;
+}
+
+.footer .third {
+    float: left;
+    width: 33.33%;
+    height: auto;
+}
+
+@media only screen and (min-device-width: 320px) and (max-width: 768px) {
+    
+    .footer .third {
+        width: 100%;
+        float: none;
+        padding: 22px;
+    }
+}
+
+.footer .legal, .footer .social-media {
+    
+}
+
+.footer .legal {
+    text-align: left;
+}
+
+.footer .social-media {
+    text-align: right;
+}
+
+.footer .logo {
+    text-align: center;
+    
+}
+.footer .logo img {
+    width: 100%;
+    max-width: 220px;
+}
+
+.footer-line {
+    width: 100%;
+    height: 32px;
+    background-image: url(../img/temp-images/pexels-photo-298863.jpeg);
+    background-size: cover;
+    background-position: center center;
+}
+
+@media only screen and (min-device-width: 320px) and (max-width: 768px) {}
