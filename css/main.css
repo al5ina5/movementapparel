@@ -59,6 +59,7 @@ a {
     padding: 44px;
     position: relative;
     z-index: 2;
+    color: black;
 }
 
 .header .logo,
@@ -90,6 +91,7 @@ a {
 .header .links a {
     margin-right: 22px;
     color: white;
+    color: black;v
 }
 
 .header .links a:last-of-type {
@@ -278,6 +280,14 @@ a {
 .footer .logo img {
     width: 100%;
     max-width: 220px;
+}
+
+.footer input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: 1px solid #d5d5d5;
 }
 
 .footer-line {
