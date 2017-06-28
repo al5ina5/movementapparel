@@ -56,20 +56,22 @@ a {
 .header {
     width: 100%;
     height: auto;
-    padding: 44px;
+    padding: 22px;
     position: relative;
     z-index: 2;
     color: black;
+    text-align: center;
 }
 
 .header .logo,
 .header .links {
     width: auto;
-    height: 60px;
 }
 
 .header .logo {
-    float: left;
+    display: inline-block;
+    height: 120px;
+    margin-bottom: 44px;
 }
 
 .header .logo img {
@@ -77,21 +79,24 @@ a {
 }
 
 .header .links {
-    float: right;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 @media only screen and (min-device-width: 320px) and (max-width: 768px) {
+    .header .logo {
+        float: left;
+        height: 40px;
+    }
     .header .links {
         display: none;
     }
 }
 
 .header .links a {
-    margin-right: 22px;
+    margin-right: 32px;
     color: white;
-    color: black;v
+    color: black;
 }
 
 .header .links a:last-of-type {
