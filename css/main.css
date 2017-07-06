@@ -94,7 +94,7 @@ a {
 }
 
 .header .links a {
-    margin-right: 32px;
+    margin-right: 44px;
     color: white;
     color: black;
 }
@@ -287,6 +287,10 @@ a {
     max-width: 220px;
 }
 
+.footer .subscribe {
+    padding: 0 22px;
+}
+
 .footer input {
     display: block;
     width: 100%;
@@ -299,9 +303,6 @@ a {
     width: 100%;
     height: auto;
     padding: 22px;
-    background-color: #131313;
-    border-top: 1px solid black;
-    text-align: center;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
@@ -311,11 +312,18 @@ a {
 
 .footer-line a {
     margin-right: 12px;
-    color: white;
+    color: black;
 }
 
 .footer-line a:last-of-type {
     margin-right: 0;
+}
+
+.footer-line .left {
+    float: left;
+}
+.footer-line .right {
+    float: right;
 }
 
 @media only screen and (min-device-width: 320px) and (max-width: 768px) {}
