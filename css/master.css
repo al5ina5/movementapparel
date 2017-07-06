@@ -68,7 +68,21 @@ b {
     max-width: 200px;
 }
 
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none !important;
+}
+
 @media only screen and (min-device-width: 320px) and (max-width: 768px) {
+    .desktop-only {
+        display: none !important;
+    }
+    .mobile-only {
+        display: block;
+    }
     .split-2,
     .split-3,
     .split-4 {
