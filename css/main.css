@@ -79,22 +79,32 @@ a {
 }
 
 .header .links {
+    width: 100%;
     text-transform: uppercase;
     letter-spacing: 1px;
+    white-space: nowrap;
+    overflow-y: scroll;
+    padding: 12px;
+    font-size: 1.3em;
+}
+
+.header span {
+    margin-right: 32px;
+    opacity: 0.2;
 }
 
 @media only screen and (min-device-width: 320px) and (max-width: 768px) {
     .header .logo {
-        float: left;
-        height: 40px;
+/*        float: left;*/
+        height: 80px;
     }
     .header .links {
-        display: none;
+/*        display: none;*/
     }
 }
 
 .header .links a {
-    margin-right: 44px;
+    margin-right: 32px;
     color: white;
     color: black;
 }
