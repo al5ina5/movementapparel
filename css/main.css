@@ -63,6 +63,16 @@ a {
     text-align: center;
 }
 
+.header a.search {
+    display: block;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: black;
+}
+
 .header .logo,
 .header .links {
     width: auto;
@@ -85,26 +95,29 @@ a {
     white-space: nowrap;
     overflow-y: scroll;
     padding: 12px;
-    font-size: 1.3em;
+    font-size: 0.9em;
 }
 
 .header span {
-    margin-right: 32px;
+    margin-right: 16px;
     opacity: 0.2;
+    display: none;
 }
 
 @media only screen and (min-device-width: 320px) and (max-width: 768px) {
     .header .logo {
-/*        float: left;*/
         height: 80px;
     }
-    .header .links {
-/*        display: none;*/
+    .header span {
+        display: inline-block;
+    }
+    .header .links a {
+        margin-right: 22px;
     }
 }
 
 .header .links a {
-    margin-right: 32px;
+    margin-right: 44px;
     color: white;
     color: black;
 }
@@ -220,19 +233,21 @@ a {
 }
 
 .sections a:nth-of-type(1) {
-    background-image: url(../img/temp-images/holiday-trip-packaging-8434.jpg);
+    background-image: url(../img/home-images/movementapparel-image-1.jpg);
 }
 
 .sections a:nth-of-type(2) {
-    background-image: url(../img/temp-images/pexels-photo-102129.jpeg);
+    background-image: url(../img/home-images/movementapparel-image-2.jpg);
 }
 
 .sections a:nth-of-type(3) {
-    background-image: url(../img/temp-images/pexels-photo-25641.jpg);
+    background-image: url(../img/home-images/movementapparel-image-3.jpg);
+    background-position: center top;
 }
 
 .sections a:nth-of-type(4) {
-    background-image: url(../img/temp-images/pexels-photo-297933.jpeg);
+    background-image: url(../img/home-images/movementapparel-image-4.jpg);
+    background-position: center bottom;
 }
 
 .sections span {
@@ -299,6 +314,7 @@ a {
 
 .footer .subscribe {
     padding: 0 22px;
+    text-align: center;
 }
 
 .footer input {
@@ -333,8 +349,56 @@ a {
 .footer-line .left {
     float: left;
 }
+
 .footer-line .right {
     float: right;
 }
 
-@media only screen and (min-device-width: 320px) and (max-width: 768px) {}
+.about-us {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    overflow: auto;
+    margin: 80px auto;
+    padding: 22px;
+}
+
+.about-us p {
+    line-height: 1.8em;
+    font-size: 1.1em;
+    font-weight: 100;
+    margin-bottom: 12px;
+    text-indent: 44px;
+}
+
+.about-us p a {
+    color: black;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 0.6em;
+}
+
+.about-us .links {
+    width: 100%;
+    height: auto;
+    white-space: nowrap;
+    overflow: auto;
+    margin-bottom: 22px;
+}
+
+.about-us .links a {
+    margin-right: 22px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.about-us .links a:last-of-type {
+    margin-right: 0;
+}
+
+@media only screen and (min-device-width: 320px) and (max-width: 768px) {
+    .about-us {
+        margin: 0;
+    }
+}
