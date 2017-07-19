@@ -16,7 +16,7 @@
     <meta name="author" content="Sebastian Alsina">
 
     <!-- Page Information -->
-    <title>About Us &raquo; MOVEMENT Apparel</title>
+    <title>Visuals &raquo; MOVEMENT Apparel</title>
     <meta name="keywords" content="">
     <meta property="og:title" content="">
     <meta property="og:description" content="">
@@ -53,7 +53,7 @@
 
 <body>
 
-    <div class="center-box">
+    <div class="center-box" style="margin-bottom: 0;">
         <div class="links">
             <a href="http://shop.movementapparel.us">Shop</a>
             <a href="http://movementapparel.us/visual">Visual</a>
@@ -61,15 +61,26 @@
             <a href="https://mediamvmnt.wordpress.com">Blog</a>
             <a href="https://shop.movementapparel.us/pages/contact">Contact</a>
         </div>
-
-        <p>Conceptualized in 2016, and Established in 2017, Movement Apparel is a Houston based company that operates behind two main objectives: First to challenge other young people to move towards their goals and dreams and second to provide exclusive, expressive clothing handcrafted with standard-setting quality fabrics and cultivated detail. We offer an increasing selection of ready-to-wear, high-end street-wear pieces that are inspired by the synonymous culture behind sports and hip-hop, along with an un-matched desire to motivate and bring hope to the youth.</p>
-
-        <p>Most of all Movement Apparel is committed to providing its customers with more value than they pay for, a personal philosophy of CEO Omar Bakdounes. It is a strong belief of Bakdounes, and his brand, that if you begin your journey today you never know where you might end up, and it is exactly with that mindset that this brand was born. The ultimate goal is that this mindset is one which each customer can uniquely identify with, and consequently use to come together, creating an uplifting culture or Movement.</p>
-
-        <p>Be proactive about your goals and un-tap your potential. Go out on a limb. Take a chance on yourself...MOVE.</p>
         
-        <p><a href="http://shop.movementapparel.us">Shop Now &rarr;</a></p>
+        <h1>The Untapped Capsule</h1>
+    </div>
 
+    <div class="gallery">
+        <script>
+            var dir = "../img/gallery";
+            var fileextension = ".jpg";
+            $.ajax({
+                //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+                url: dir,
+                success: function(data) {
+                    //List all .png file names in the page
+                    $(data).find("a:contains(" + fileextension + ")").each(function() {
+                        var filename = this.href.replace(window.location.host, "").replace("http://", "");
+                        $(".gallery").append("<img src='" + filename + "'>");
+                    });
+                }
+            });
+        </script>
     </div>
 
 </body>
