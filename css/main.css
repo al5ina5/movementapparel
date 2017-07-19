@@ -407,8 +407,12 @@ a {
 
 .gallery img {
     height: 100%;
+    margin-right: 4px;
 }
 
+.gallery img:last-of-type {
+    margin-right: 0;
+}
 @media only screen and (min-device-width: 320px) and (max-width: 768px) {
     .center-box {
         margin: 0;

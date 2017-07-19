@@ -29,7 +29,7 @@
     <meta name="twitter:image" content="">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="" type="../img/movement-apparel-favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../img/movement-apparel-favicon.png">
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x144.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png">
@@ -61,22 +61,20 @@
             <a href="https://mediamvmnt.wordpress.com">Blog</a>
             <a href="https://shop.movementapparel.us/pages/contact">Contact</a>
         </div>
-        
+
         <h1>The Untapped Capsule</h1>
     </div>
 
     <div class="gallery">
         <script>
-            var dir = "../img/gallery";
-            var fileextension = ".jpg";
+            var folder = "../img/gallery";
             $.ajax({
-                //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-                url: dir,
+                url: folder,
                 success: function(data) {
-                    //List all .png file names in the page
-                    $(data).find("a:contains(" + fileextension + ")").each(function() {
-                        var filename = this.href.replace(window.location.host, "").replace("http://", "");
-                        $(".gallery").append("<img src='" + filename + "'>");
+                    $(data).find("a").attr("href", function(i, val) {
+                        if (val.match(/\.(jpe?g|png|gif)$/)) {
+                            $(".gallery").append("<img src='" + val + "'>");
+                        }
                     });
                 }
             });
