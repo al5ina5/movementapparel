@@ -68,12 +68,15 @@
     <div class="gallery">
         <script>
             var folder = "../img/gallery";
+            var count = 0;
             $.ajax({
                 url: folder,
                 success: function(data) {
                     $(data).find("a").attr("href", function(i, val) {
                         if (val.match(/\.(jpe?g|png|gif)$/)) {
-                            $(".gallery").append("<img src='" + val + "'>");
+                            count++;
+                            $(".gallery").append('<div class="image"><img src="' + val + '" alt=""><span class="count">' + count + '/30</span></div>');
+//                            $(".gallery").append("<img src='" + val + "'> " + num);
                         }
                     });
                 }
