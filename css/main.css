@@ -12,7 +12,7 @@
 /* [==] FONTS [==]*/
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
-@import url('https://fonts.googleapis.com/css?family=Lora:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
 
 /*
  * [==] General [==]
@@ -24,7 +24,7 @@ body {
     width: 100%;
     background-color: white;
     color: #222222;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 a {
@@ -34,7 +34,7 @@ a {
 .landing {
     width: 100%;
     height: 100%;
-    background-image: url(../img/temp-images/pexels-photo-298864.jpeg);
+    background-image: url(../img/movement-apparel-video-thumbnail.png);
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -56,19 +56,32 @@ a {
 .header {
     width: 100%;
     height: auto;
-    padding: 44px;
+    padding: 22px;
     position: relative;
     z-index: 2;
+    color: black;
+    text-align: center;
+}
+
+.header a.search {
+    display: block;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: black;
 }
 
 .header .logo,
 .header .links {
     width: auto;
-    height: 60px;
 }
 
 .header .logo {
-    float: left;
+    display: inline-block;
+    height: 100px;
+    margin-bottom: 22px;
 }
 
 .header .logo img {
@@ -76,20 +89,37 @@ a {
 }
 
 .header .links {
-    float: right;
+    width: 100%;
     text-transform: uppercase;
     letter-spacing: 1px;
+    white-space: nowrap;
+    overflow-y: scroll;
+    padding: 12px;
+    font-size: 0.8em;
+}
+
+.header span {
+    margin-right: 16px;
+    opacity: 0.2;
+    display: none;
 }
 
 @media only screen and (min-device-width: 320px) and (max-width: 768px) {
-    .header .links {
-        display: none;
+    .header .logo {
+        height: 80px;
+    }
+    .header span {
+        display: inline-block;
+    }
+    .header .links a {
+        margin-right: 22px;
     }
 }
 
 .header .links a {
-    margin-right: 22px;
+    margin-right: 44px;
     color: white;
+    color: black;
 }
 
 .header .links a:last-of-type {
@@ -98,7 +128,7 @@ a {
 
 .header a.mobile-nav-btn {
     display: none;
-    color: white;
+    color: black;
     float: right;
     font-size: 2em;
 }
@@ -179,19 +209,18 @@ a {
 .sections {
     width: 100%;
     height: auto;
-    font-family: 'Lora', serif;
 }
 
 .sections a {
     display: block;
     width: 25%;
-    height: 260px;
-    line-height: 260px;
+    height: 280px;
+    line-height: 280px;
     float: left;
     text-align: center;
     background-size: cover;
     color: white;
-    font-weight: 100;
+    font-weight: 900;
     font-size: 1.3em;
     text-transform: uppercase;
 }
@@ -204,19 +233,21 @@ a {
 }
 
 .sections a:nth-of-type(1) {
-    background-image: url(../img/temp-images/holiday-trip-packaging-8434.jpg);
+    background-image: url(../img/home-images/movementapparel-image-1.jpg);
 }
 
 .sections a:nth-of-type(2) {
-    background-image: url(../img/temp-images/pexels-photo-102129.jpeg);
+    background-image: url(../img/home-images/movementapparel-image-2.jpg);
 }
 
 .sections a:nth-of-type(3) {
-    background-image: url(../img/temp-images/pexels-photo-25641.jpg);
+    background-image: url(../img/home-images/movementapparel-image-3.jpg);
+    background-position: center top;
 }
 
 .sections a:nth-of-type(4) {
-    background-image: url(../img/temp-images/pexels-photo-297933.jpeg);
+    background-image: url(../img/home-images/movementapparel-image-4.jpg);
+    background-position: center bottom;
 }
 
 .sections span {
@@ -232,7 +263,7 @@ a {
 .footer {
     width: 100%;
     height: auto;
-    padding: 44px;
+    padding: 80px 44px;
 }
 
 .footer a {
@@ -247,7 +278,6 @@ a {
 }
 
 @media only screen and (min-device-width: 320px) and (max-width: 768px) {
-    
     .footer .third {
         width: 100%;
         float: none;
@@ -255,33 +285,136 @@ a {
     }
 }
 
-.footer .legal, .footer .social-media {
-    
+.footer .left,
+.footer .right {
+    font-size: 100;
+    line-height: 1.4em;
+    color: #c6c6c6;
+    font-size: 0.8em;
+    font-weight: 100;
 }
 
-.footer .legal {
+.footer .left {
     text-align: left;
 }
 
-.footer .social-media {
+.footer .right {
+    text-align: right;
     text-align: right;
 }
 
 .footer .logo {
     text-align: center;
-    
 }
+
 .footer .logo img {
     width: 100%;
     max-width: 220px;
 }
 
-.footer-line {
-    width: 100%;
-    height: 32px;
-    background-image: url(../img/temp-images/pexels-photo-298863.jpeg);
-    background-size: cover;
-    background-position: center center;
+.footer .subscribe {
+    padding: 0 22px;
+    text-align: center;
 }
 
-@media only screen and (min-device-width: 320px) and (max-width: 768px) {}
+.footer input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: 1px solid #d5d5d5;
+}
+
+.footer-line {
+    width: 100%;
+    height: auto;
+    padding: 22px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.footer-line a {
+    margin-right: 12px;
+    color: black;
+}
+
+.footer-line a:last-of-type {
+    margin-right: 0;
+}
+
+.footer-line .left {
+    float: left;
+}
+
+.footer-line .right {
+    float: right;
+}
+
+.center-box {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    overflow: auto;
+    margin: 80px auto;
+    padding: 22px;
+}
+
+.center-box p {
+    line-height: 1.8em;
+    font-size: 1.1em;
+    font-weight: 100;
+    margin-bottom: 12px;
+    text-indent: 44px;
+}
+
+.center-box p a {
+    color: black;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 0.6em;
+}
+
+.center-box .links {
+    width: 100%;
+    height: auto;
+    white-space: nowrap;
+    overflow: auto;
+    margin-bottom: 22px;
+}
+
+.center-box .links a {
+    margin-right: 22px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.center-box .links a:last-of-type {
+    margin-right: 0;
+}
+
+.gallery {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.gallery img {
+    height: 100%;
+    margin-right: 4px;
+}
+
+.gallery img:last-of-type {
+    margin-right: 0;
+}
+@media only screen and (min-device-width: 320px) and (max-width: 768px) {
+    .center-box {
+        margin: 0;
+    }
+}
